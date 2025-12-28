@@ -19,11 +19,9 @@ The system follows a reactive security pattern:
 - **Amazon EventBridge:** Event bus to route security findings to response functions.
 
 ## ⚙️ Critical Configuration Steps
-
-### 1. Decoupled Configuration: Used Environment Variables (SNS_TOPIC_ARN) to keep the code portable and avoid hardcoding sensitive resource identifiers.
-
-### 2. IAM Policy Enforcement: Implemented the Principle of Least Privilege (PoLP) by granting the Lambda function explicit permissions to publish alerts, ensuring a secure communication channel between GuardDuty and SNS.
-
+1. **Decoupled Configuration:** Used **Environment Variables** (SNS_TOPIC_ARN) to keep the code portable and avoid hardcoding sensitive resource identifiers.
+2. **IAM Policy Enforcement:** Implemented the **Principle of Least Privilege** (PoLP) by granting the Lambda function explicit permissions to publish alerts, ensuring a secure communication channel between GuardDuty and SNS.
+   
 ## 🛡️ Implementation Details
 
 ### Detection: GuardDuty Findings
